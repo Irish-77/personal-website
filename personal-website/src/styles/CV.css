@@ -1,0 +1,11 @@
+hr {
+    transition: width 1s ease-out; /* For Safari 3.1 to 6.0 */
+    transition: width 1s  ease-out;
+    width : 100%;
+    float: left;
+  }
+
+h3:hover > hr {
+    width:0%;
+    float: right;
+ }
