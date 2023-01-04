@@ -1,0 +1,49 @@
+name: Build
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+      
+    strategy:
+      matrix:
+        node: [18]
+
+    steps:  
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install project
+        run: npm install
+      - name: Build the project
+        run: npm run build --if-present
+        
+      - run: git config user.name github-actions
+        shell: bash
+        working-directory: .
+      - run: git config user.email github-actions@github.com
+        shell: bash
+        working-directory: .
+      - run: git --work-tree build add --all
+        shell: bash
+        working-directory: .
+      - run: git commit -m "Automatic deployment by github-actions"
+        shell: bash
+        working-directory: .
+      - run: git push origin HEAD:gh-pages --force
+        shell: bash
+        working-directory: .
+        
+        
+        
+        
+        
+        
+        
+        
