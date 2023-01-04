@@ -26,7 +26,7 @@ function CV() {
         {CVList.map((cv_item) => {
 
           vertical_timeline_element = vertical_timeline_element_base.concat(cv_item.type)
-          const icon = (cv_item.type == 'work') ? (<WorkIcon />) : (<SchoolIcon />);
+          const icon = (cv_item.type === 'work') ? (<WorkIcon />) : (<SchoolIcon />);
 
           return (
             <VerticalTimelineElement

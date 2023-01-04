@@ -5,9 +5,6 @@
 // location: '',
 // institution: ''
 
-import { SettingsPowerSharp } from "@material-ui/icons"
-
-
 // Usage for education, certificates, job experience
 
 export const CVList = [
