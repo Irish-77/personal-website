@@ -20,7 +20,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Router basename="https://irish-77.github.io/personal-website/">
         <Navbar/>
         <Routes>
           <Route path="/" element={<Landing />} />
