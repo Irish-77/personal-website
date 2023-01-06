@@ -1,6 +1,6 @@
 // General Imports
 import React from 'react'
-import { BrowserRouter as Routes, Route, HashRouter } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Import Pages
 import Landing from './pages/Landing';
@@ -20,23 +20,23 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <HashRouter>
+      <Router>
         <Navbar/>
         <Routes>
-          <Route path="/" element={<Landing />} />
+          <Route path="/personal-website/" element={<Landing />} />
           
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/project/:id" element={<ProjectDisplay />} />
+          <Route path="/personal-website/projects" element={<Projects />} />
+          <Route path="/personal-website/project/:id" element={<ProjectDisplay />} />
           
-          <Route path="/cv" element={<CV />} />
+          <Route path="/personal-website/cv" element={<CV />} />
 
-          <Route path="/experience" element={<Landing />} />
+          <Route path="/personal-website/experience" element={<Landing />} />
     
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:id" element={<BlogDisplay />} />
+          <Route path="/personal-website/blog" element={<Blog />} />
+          <Route path="/personal-website/blog/:id" element={<BlogDisplay />} />
         </Routes>
         <Footer/>
-      </HashRouter>
+      </Router>
     </div>
   );
 }
