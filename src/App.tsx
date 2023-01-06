@@ -1,6 +1,6 @@
 // General Imports
 import React from 'react'
-import { BrowserRouter as Router, Routes, Route, HashRouter } from 'react-router-dom';
+import { BrowserRouter as Routes, Route, HashRouter } from 'react-router-dom';
 
 // Import Pages
 import Landing from './pages/Landing';
