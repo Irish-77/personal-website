@@ -1,6 +1,6 @@
 // General Imports
 import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, HashRouter } from 'react-router-dom';
 
 // Import Pages
 import Landing from './pages/Landing';
@@ -20,7 +20,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Router basename="https://irish-77.github.io/personal-website/">
+      <HashRouter>
         <Navbar/>
         <Routes>
           <Route path="/" element={<Landing />} />
@@ -36,7 +36,7 @@ function App() {
           <Route path="/blog/:id" element={<BlogDisplay />} />
         </Routes>
         <Footer/>
-      </Router>
+      </HashRouter>
     </div>
   );
 }
