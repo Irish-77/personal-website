@@ -20,20 +20,20 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Router basename="/personal-website">
         <Navbar/>
         <Routes>
-          <Route path="/personal-website/" element={<Landing />} />
+          <Route path="/" element={<Landing />} />
           
-          <Route path="/personal-website/projects" element={<Projects />} />
-          <Route path="/personal-website/project/:id" element={<ProjectDisplay />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/project/:id" element={<ProjectDisplay />} />
           
-          <Route path="/personal-website/cv" element={<CV />} />
+          <Route path="/cv" element={<CV />} />
 
-          <Route path="/personal-website/experience" element={<Landing />} />
+          <Route path="/experience" element={<Landing />} />
     
-          <Route path="/personal-website/blog" element={<Blog />} />
-          <Route path="/personal-website/blog/:id" element={<BlogDisplay />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:id" element={<BlogDisplay />} />
         </Routes>
         <Footer/>
       </Router>
