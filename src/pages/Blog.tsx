@@ -16,7 +16,8 @@ function Blog() {
   
   Calculate the value of $s$ when $u = 10\\frac{m}{s}$ and $a = 2\\frac{m}{s^{2}}$ at $$t = 1s$$
 
-  <img src="/project_image_pacman.jpeg" alt="Text">
+  <img src="../project_image_pacman.jpeg" alt="Text">
+
   `;
 
   return (
