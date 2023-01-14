@@ -18,6 +18,7 @@ import Footer from './components/Footer';
 import './App.css';
 
 function App() {
+  console.log(process.env.REACT_APP_BASE_URL)
   return (
     <div className="App">
       <Router basename="/personal-website">
