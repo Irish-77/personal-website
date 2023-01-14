@@ -7,8 +7,6 @@ import rehypeRaw from 'rehype-raw';
 
 import 'katex/dist/katex.min.css';
 
-import PacmanImage from '../assets/projects/project_image_pacman.jpeg';
-
 function Blog() {
 
   const formula =  `
