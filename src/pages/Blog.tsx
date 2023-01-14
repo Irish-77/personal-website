@@ -17,7 +17,7 @@ function Blog() {
   Calculate the value of $s$ when $u = 10\\frac{m}{s}$ and $a = 2\\frac{m}{s^{2}}$ at $$t = 1s$$
 
   # 1
-  <img src="../project_image_pacman.jpeg" alt="Text">
+  ![](https://irish-77.github.io/personal-website/project_image_pacman.jpeg)
 
 
   # 2
@@ -30,6 +30,9 @@ function Blog() {
         children={ formula }
         remarkPlugins={[remarkMath]}
         rehypePlugins={[rehypeKatex, rehypeRaw]}
+        transformImageUri={uri =>
+          uri.startsWith("http") ? uri : `${process.env.REACT_IMAGE_BASE_URL}${uri}`
+        }
       />
     </div>
   )
