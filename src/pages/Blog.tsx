@@ -15,8 +15,9 @@ function Blog() {
   Calculate the value of $s$ when $u = 10\\frac{m}{s}$ and $a = 2\\frac{m}{s^{2}}$ at $$t = 1s$$
 
   // # 1
-  // ![](http://localhost:3000/personal-website/project_image_pacman.jpeg")
 
+
+  ![](%%URL%%/project_image_pacman.jpeg)
 
   # 2
   <img src="%%URL%%/project_image_pacman.jpeg" alt="Text">
@@ -29,7 +30,7 @@ function Blog() {
 
     <div>
       <ReactMarkdown
-        children={ String(formula).replace("%%URL%%", process.env.REACT_APP_BASE_URL) }
+        children={ String(formula).replaceAll("%%URL%%", process.env.REACT_APP_BASE_URL) }
         remarkPlugins={[remarkMath]}
         rehypePlugins={[rehypeKatex, rehypeRaw]}
       />
