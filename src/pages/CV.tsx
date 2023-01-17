@@ -27,7 +27,7 @@ function CV() {
 
           vertical_timeline_element = vertical_timeline_element_base.concat(cv_item.type)
           const icon = (cv_item.type === 'work') ? (<WorkIcon />) : (<SchoolIcon />);
-          const color = (cv_item.type == 'work') ? '#3e497a' : '#e9d35b';
+          const color = (cv_item.type === 'work') ? '#3e497a' : '#e9d35b';
 
           const descriptionEntries = cv_item.description.map((entry) =>
               <li> { entry } </li> 
