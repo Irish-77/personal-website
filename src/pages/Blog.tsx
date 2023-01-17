@@ -1,39 +1,27 @@
+// General
 import React from 'react'
-import ReactMarkdown from 'react-markdown';
-import remarkMath from 'remark-math';
-import rehypeKatex from 'rehype-katex';
-import rehypeRaw from 'rehype-raw';
 
+// Components
+import BlogItem from '../components/BlogItem';
 
-import 'katex/dist/katex.min.css';
+// Services
+import { BlogList } from '../services/BlogList'
+
+// Styles
+import '../styles/Blog.css';
 
 function Blog() {
 
-  const formula =  `
-  Given a **formula** below $$\\frac{1}{2}$$
-  
-  Calculate the value of $s$ when $u = 10\\frac{m}{s}$ and $a = 2\\frac{m}{s^{2}}$ at $$t = 1s$$
-
-  // # 1
-
-
-  ![](%%URL%%/project_image_pacman.jpeg)
-
-  # 2
-  <img src="%%URL%%/project_image_pacman.jpeg" alt="Text">
-
-
-  `;
-
   return (
 
+    <div className="projects">
+      <h1> My Personal Blog Page </h1>
+      <div className="projectList">
+        {BlogList.map((blogPosts, idx) => {
+          return <BlogItem id={idx} title={blogPosts.title} image={blogPosts.image} summary={blogPosts.summary} />
+        })}
 
-    <div>
-      <ReactMarkdown
-        children={ String(formula).replaceAll("%%URL%%", process.env.REACT_APP_BASE_URL) }
-        remarkPlugins={[remarkMath]}
-        rehypePlugins={[rehypeKatex, rehypeRaw]}
-      />
+      </div>
     </div>
   )
 }
