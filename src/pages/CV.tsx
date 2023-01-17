@@ -33,9 +33,6 @@ function CV() {
               <li> { entry } </li> 
           );
 
-          const description_entries = cv_item.description
-
-
           return (
             <VerticalTimelineElement
               className={vertical_timeline_element}
