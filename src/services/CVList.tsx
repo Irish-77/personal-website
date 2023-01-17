@@ -17,7 +17,7 @@ export const CVList = [
         location: 'Mannheim',
         institution: 'Duale Hochschule Baden-Württemberg (DHBW)',
         description: [
-            '1',
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, neque blanditiis! Inventore eum labore dolore tenetur, ab pariatur accusamus dignissimos quisquam delectus officiis perferendis provident et non doloribus alias ex. ',
             '4',
             '4'
         ],

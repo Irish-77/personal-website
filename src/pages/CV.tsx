@@ -27,12 +27,20 @@ function CV() {
 
           vertical_timeline_element = vertical_timeline_element_base.concat(cv_item.type)
           const icon = (cv_item.type === 'work') ? (<WorkIcon />) : (<SchoolIcon />);
+          const color = (cv_item.type == 'work') ? '#3e497a' : '#e9d35b';
+
+          const descriptionEntries = cv_item.description.map((entry) =>
+              <li> { entry } </li> 
+          );
+
+          const description_entries = cv_item.description
+
 
           return (
             <VerticalTimelineElement
               className={vertical_timeline_element}
               date={cv_item.date}
-              iconStyle={{ background: "#e9d35b", color: "#fff" }}
+              iconStyle={{ background: color, color: "#fff" }}
               icon={icon}
             >
               <h3 className="vertical-timeline-element-title"> {cv_item.title} </h3>
@@ -40,13 +48,8 @@ function CV() {
               <h4 className="vertical-timeline-element-subtitle"> {cv_item.subtitle + " @" + cv_item.institution} </h4>
 
               <ul>
-                
-                <li>
-                  { cv_item.description }
-                </li>
-
+                { descriptionEntries }
               </ul>
-
 
             </VerticalTimelineElement>
           )
