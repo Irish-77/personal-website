@@ -1,12 +1,12 @@
-// General Imports
+// Imports
 import React from 'react';
 
-// Import Components
+// Components
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import SchoolIcon from '@material-ui/icons/School';
 import WorkIcon from '@material-ui/icons/Work';
 
-// Import Services
+// Services
 import { CVList } from '../services/CVList';
 
 // Styles
