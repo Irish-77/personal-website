@@ -1,0 +1,69 @@
+.blog-post {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    text-align: justify;
+    font-size: 130%;
+}
+
+@media screen and (max-width: 640px) {
+    .blog-post {
+        /*         
+        margin-left: 5%;
+        margin-right: 5%; */
+        width: 90%;
+        margin: auto;
+    }
+}
+
+img {
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: contain;
+
+    max-width: 100%;
+    height: auto;
+    width: auto\9;
+}
+
+tr {
+    border-top: 1px solid #c6cbd1;
+    background: #fff;
+}
+
+th,
+td {
+    padding: 6px 13px;
+    border: 1px solid #dfe2e5;
+}
+
+/* table tr:nth-child(2n) {
+    background: #f6f8fa;
+} */
+
+blockquote {
+    border-left: 10px solid #ccc;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+blockquote:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+
+blockquote p {
+    display: inline;
+}
+
+li>p {
+    margin: 0;
+}

@@ -7,23 +7,28 @@ import ReactMarkdown from 'react-markdown';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import rehypeRaw from 'rehype-raw';
+import remarkGfm from 'remark-gfm'
 
 // Services
 import { BlogList } from '../services/BlogList'
 
 // Styles
 import 'katex/dist/katex.min.css';
+import '../styles/BlogDisplay.css';
 
 function BlogDisplay() {
 
   const { id } = useParams();
   const blogPost = BlogList[id];
 
+  console.log(process.env.REACT_APP_BASE_URL);
+
+
   return (
-    <div>
+    <div className="blog-post">
       <ReactMarkdown
         children={String(blogPost.content).replaceAll("%%URL%%", process.env.REACT_APP_BASE_URL)}
-        remarkPlugins={[remarkMath]}
+        remarkPlugins={[remarkGfm, remarkMath]}
         rehypePlugins={[rehypeKatex, rehypeRaw]}
       />
     </div>
