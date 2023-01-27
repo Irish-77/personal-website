@@ -1,10 +1,10 @@
-// General Imports
+// Imports
 import React from 'react';
 
-// Import Components
+// Components
 import ProjectItem from '../components/ProjectItem';
 
-// Import Services
+// Services
 import { ProjectList } from '../services/ProjectList';
 
 // Styles
@@ -16,7 +16,7 @@ function Projects() {
       <h1> My Personal Projects </h1>
       <div className="projectList">
         {ProjectList.map((project, idx) => {
-          return <ProjectItem id={idx} name={project.name} image={project.image} skills={project.skills} />
+          return <ProjectItem id={idx} name={project.name} image={project.image} skills={project.skills} repoURL={project.repoURL} />
         })}
 
       </div>
