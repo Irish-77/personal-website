@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 function ProjectItem({image, name, id, skills, repoURL}: any) {
 
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
     return (
         <div
