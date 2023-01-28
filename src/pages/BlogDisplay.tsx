@@ -25,12 +25,15 @@ function BlogDisplay() {
 
 
   return (
-    <div className="blog-post">
+    <div>
+      <div style={{ backgroundImage: `url(${blogPost.image})` }} className="cover" />
+      <div className="blog-post">
       <ReactMarkdown
         children={String(blogPost.content).replaceAll("%%URL%%", process.env.REACT_APP_BASE_URL)}
         remarkPlugins={[remarkGfm, remarkMath]}
         rehypePlugins={[rehypeKatex, rehypeRaw]}
       />
+      </div>
     </div>
   )
 }

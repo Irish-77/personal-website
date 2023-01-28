@@ -4,7 +4,7 @@ import { blog_AI_History } from '../content/Blog_AIHistory'
 
 // Thumbnails
 import ExampleWallpaper from '../assets/blog/wallpaper.jpg';
-
+import ChessWallpaper from '../assets/blog/chess.jpg';
 
 
 export const BlogList = [
@@ -18,12 +18,12 @@ export const BlogList = [
     },
     {
         title: 'Künstliche Intelligenz in Brettspielen',
-        image: ExampleWallpaper,
+        image: ChessWallpaper,
         summary: '',
         content: blog_AI_History,
-        date: '07-01-2022',
+        tags: 'AI, Schach, Go, Brettspiele',
+        published: '07-01-2022',
+        lastChange: '07-01-2022',
         author: 'Bastian Berle'
     }
-
-
 ]
