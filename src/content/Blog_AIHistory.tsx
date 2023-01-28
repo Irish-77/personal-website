@@ -1,8 +1,10 @@
 export const blog_AI_History:string = `
 
-## 1 Einleitung
+# Künstliche Intelligenz in Brettspielen
 
-> *„Even if I become the number one, there is an entity that cannot be defeated.“* <br /><br />~ Lee Sedol, ehemaliger Go-Weltmeister
+> „Even if I become the number one, there is an entity that cannot be defeated.“ <br /><br />~ Lee Sedol, ehemaliger Go-Weltmeister
+
+## 1 Einleitung
 
 Mit diesem Satz verkündete Lee Sedol, einer der besten Go-Spieler, 2019 das Ende seiner Profikarriere, da es nach ihm keinen Sinn mehr ergab, ein Spiel weiter zu spielen, wenn der Sieger bereits im Vorhinein feststeht.
 Sedol bezieht sich mit dieser Aussage auf AlphaGo, einer Artificial Intelligence (AI).
@@ -34,12 +36,15 @@ Ein Spiel kann eine perfekte bzw. vollkommene Information besitzen.
 Diese Eigenschaft, die aus der mathematischen Spieltheorie stammt, beschreibt, dass jedem Spieler zu jedem beliebigen Zeitpunkt das vorangegangene Spielgeschehen/-historie inklusive der zuvor getroffenen Entscheidungen des Opponenten bekannt ist.[^4]
 Das andere Unterscheidungskriterium ist der Einfluss der Zufallskomponente. Spiele mit imperfekten/unvollständingen Informationen werden auch Bayes-Spiele genannt.
 
+
 | | perfekte Informationen | imperfekte Informationen |
 | --------------------- | ---------- | ------------- |
 | mit Zufall                  | Mensch ärgere Dich nicht     | Poker  |
 | ohne Zufall | Mühle, Schach, Go        | - |
 
-Tabelle 2.1: Beispiele von Gesellschaftsspielen für die zwei relevanten Unterscheidungsmerkmalen
+<div class="table-description"> 
+Tabelle 1: Beispiele von Gesellschaftsspielen für die zwei relevanten Unterscheidungsmerkmalen
+</div>
 
 Diese Arbeit vernachlässigt Brettspiele, die eine Zufallskomponente besitzen, da hier nicht der bessere Spieler gewinnt, sondern derjenige, der am meisten "Glück" hat.
 Außerdem beschränkt sich die Arbeit auf Spiele mit einer perfekten Information.
@@ -110,34 +115,98 @@ Es funktioniert in der 14. Version mittels eines NNUE (Efficiently Updatable Neu
 Das NNUE wird als Bewertungsfunktion für die AlphaBeta-Suche eingesetzt und wurde so optimiert, dass es gut auf CPUs läuft.
 Dadurch, dass das komplette Programm auf der CPU ausgeführt wird, werden längere Transferzeiten vermieden.[^23]
 
+| Platz | Name | Elo-Rating |
+| --------------------- | ---------- | ------------- |
+| 1 | Stockfish 14.1 64-bit 8CPU     | 3742  |
+| 2 | Dragon by Komodo 2.6 64-bit 8CPU        | 3721 |
+| 3 | Fat Fritz 2 (in SF) 64-bit 8CPU        | 3719 |
+
+<div class="table-description"> 
+Tabelle 2:
+Überblick der drei besten Schachprogrammen (Stand: 19.02.2022).
+Stockfish 14 hat einen Elo von 3742.
+Im Gegensatz dazu hat der amtierende Schachweltmeister Magnus Carlsen in seiner besten Zeit ein Elo-Rating von "nur" 2882 Punkten.[^24] [^25]
+</div>
 
 
+### 2.3 Go
 
-## Quellen
+Go ist ein klassisches Brettspiel und kommt ursprünglich aus China. 
+Bei Go spielen zwei Spieler abwechselnd ihre Steine in weiß bzw. in schwarz auf einem 19x19 großen Brett.
+Das Ziel ist es, die Steine des Gegners einzukreisen, um mehr Spielfeldfläche als der Gegner zu erobern.
+Wer mehr als die Hälfte des Bretts eingenommen hat, gewinnt das Spiel.
+Obwohl Go wegen der einfacheren Regeln leichter zu spielen ist, ist die Spielkomplexität um einiges höher. 
+Während man beim Schach einen professionellen Schachspieler ohne irgendeine Lernkomponente, also nur mit Brute-Forcing besiegen kann, ist dies bei Go wegen der enormen Komplexität nicht möglich.[^26]
+In Go gibt es $2.08168199382 \\cdot 10^{170}$ legale Positionen.[^27]
+Im Vergleich dazu: Es gibt schätzungsweise "nur" $10^{80}$ Atome in dem uns bisher bekannten Universum.[^28]
+Die Anzahl aller legalen Zugkombinationen lässt sich nicht genau berechnen. Bei einer Partie zwischen 200 und 361 Zügen kann es in etwa $10^{700}$ mögliche Partien geben.[^27]
+Bis 2015 gab es keine guten Go-AIs bzw. -Programme, die mit einem Weltmeister auf einem 19x19 Spielfeld mithalten konnten.
+Viele Forscher sind davon ausgegangen, dass es lange dauern würde, bis eine Maschine den Mensch besiegen könnte.[^29]
+Im Oktober 2015 konnte das von DeepMind entwickelte AlphaGo erstmals gegen den mehrfachen Europameister, Fan Hui (2. Dan), gewinnen.
+Als Grundlage nutzte AlphaGo die Kombination bestehend aus einem Policy Network, das verschiedene Positionen berechnet, einem Value Network, dass diese Positionen bewertet und einer Monte-Carlo-Baumsuche, das die Varianten weiterführt.
+Ein Jahr später spielte AlphaGo gegen Lee Sedol (9. Dan), der zu dieser Zeit als der beste Spieler der Welt galt.
+Dieses Spiel wurde weltweit übertragen und hatte mehr als 100 Millionen Live-Zuschauer.[^30]
+Viele Menschen hofften auf einen Sieg von Sedol. In der offiziellen Filmdokumentation von DeepMind wurde berichtet, dass der Druck auf Sedol enorm war, da im Gegensatz zu traditionellen Mensch-vs.-Mensch-Duellen er nicht alleine für sich spielte, sondern dieses Mal stellvertretend für die gesamte Menschheit.[^31]
+Obwohl sich Sedol sehr sicher war, gegen AlphaGo zu gewinnen, verlor er anschließend deutlich mit 4:1.
+Besonders bemerkenswert war der Spielzug 37 in der zweiten Partie. Dieser Zug sah im ersten Moment untypisch aus und die Kommentatoren vermuteten einen Logikfehler bei AlphaGo.
+Erst später zeigten sich die Vorteile dieses Zugs, was ein Beweis dafür war, dass AlphaGo nicht nur in der Lage war, seine Züge basierend auf bisherigen Partien zu reproduzieren, sondern auch, dass es Go verstand, eigene kreative Wege zu finden.[^32]
+Im Anschluss an die Niederlage versuchte Sedol, die Go-Gemeinde zu beruhigen, indem er die Niederlage auf seine Fehler beschränkte. Allerdings konnte AlphaGo 2017 auch gegen den Weltmeister nach Sedol, Ke Jie, deutlich mit 3:0 gewinnen.[^33]
+Mit diesen beiden Niederlagen war es bewiesen, dass Computer uns Menschen in Brettspielen und den dafür notwendigen Fähigkeiten überlegen sind.[^31]
+Der Sieg von AlphaGo wurde gesellschaftlich bzw. medial unterschiedlich wahrgenommen. Auf der einen Seite haben sich die Menschen bereits daran gewöhnt, dass eine AI überlegen ist (Deep Blue vs Kasparow), aber auf der anderen Seite haben doch viele gehofft, es werde noch dauern, bis eine Maschine dem Menschen überlegen sei.[^29]
 
-[^1]: career_end.
-[^2]: chess_skills.
-[^3]: ai_fear.
-[^4]: board_games_info
-[^5]: dame_rules
-[^6]: dame_1
-[^7]: dame_2
-[^8]: dame_3
-[^9]: dame_5
-[^10]: dame_4 IST SO RICHTIG
-[^11]: torres
-[^12]: turochamp
+Aus AlphaGo und dessen Grundarchitektur bzw. -prinzip entstand später AlphaGo Zero und AlphaZero, zwei abgeänderte Versionen, die in der Lage sind, sich innerhalb weniger Stunden andere Brettspiele auf einem professionellen Niveau selbst beizubringen.
+
+
+## Fazit
+
+Zusammenfassend lässt sich sagen, dass Brettspiele für die Entwicklung von AI ein treibender Faktor waren, da sie neben neuen Techniken auch führende Pioniere in dem Feld von künstlicher Intelligenz hervorbrachten.
+Allerdings haben nicht nur Brettspiele eine Auswirkung auf den Fortschritt von AI sondern auch vice versa.
+Mit immer stärker werdenden AIs stellt sich langfristig eine Frage nach der gesellschaftlichen Relevanz von den Brettspielen hinsichtlich Wettbewerben und Amateursport.
+Ergäbe es auf Dauer gesehen im Profibereich überhaupt Sinn, zwei Menschen gegeneinander antreten zu lassen, obwohl bekannt ist, dass es eine Maschine gibt, die dem Menschen weit überlegen ist.
+Lee Sedol hat für sich entschieden, nicht mehr an Spielen auf Wettkampfniveau teilzunehmen.
+Allerdings bleibt unklar, ob Sedol damit nur eine Ausnahme war. Schließlich hat Schach während der COVID-19-Pandemie sowohl im  Amateur- als auch im professionellen Bereich an Bedeutung gewonnen.[^34]
+Für das Forschungsgebiet innerhalb der künstlichen Intelligenz wird die Bedeutung von Brettspielen abnehmen.
+Zwar gibt es immer noch Maschine-vs.-Maschine-Wettbewerbe, in dem Teams weiterhin versuchen, eine "bessere" AI zu kreieren, allerdings wurde mit dem Sieg von AlphaGo in dem komplexesten Brettspiel Go der Sättigungspunkt bzw. der eigentliche Meilenstein erreicht.
+Ein Großteil der Investitionen wird vermutlich in andere Problemstellungen fließen.
+
+<div class="footnotes">
+
+[^1]: Go game master quits saying machines “cannot be defeated.” (2019, November 27). The Guardian. https://www.theguardian.com/world/2019/nov/27/go-game-master-quits-saying-machines-cannot-be-defeated
+[^2]: Zapf, H. (n.d.). DER BILDUNGSWERT DES SCHACH - EINE VERGLEICHENDE UNTERSUCHUNG. Deutscher Schachbund. Retrieved February 20, 2022, from https://www.schachbund.de/bildungswert-des-schach.html
+[^3]: Groß, S., & Martin-Jung, H. (2021, December 13). Wenn Kollege KI als Konkurrent gesehen wird. Süddeutsche Zeitung. https://www.sueddeutsche.de/wirtschaft/ki-ai-arbeitswelt-1.5486017
+[^4]: Levin, J. (2002). Games of Incomplete Information. https://web.stanford.edu/~jdlevin/Econ%20203/Bayesian.pdf
+[^5]: WCDF. (n.d.). Rules of Draughts (Checkers) . World Checkers Draughts Federation. Retrieved February 20, 2022, from https://www.wcdf.net/rules/rules_of_checkers_english.pdf
+[^6]: Sammut, C., & Webb, G. I. (Eds.). (2010). Samuel’s Checkers Player. In Encyclopedia of Machine Learning (pp. 881–881). Springer US. https://doi.org/10.1007/978-0-387-30164-8_740
+[^7]: The IBM 700 Series. (n.d.). IBM. Retrieved February 20, 2022, from https://www.ibm.com/ibm/history/ibm100/us/en/icons/ibm700series/impacts/
+[^8]: Madrigal, A. C. (2017, July 19). How Checkers Was Solved. The Atlantic. https://www.theatlantic.com/technology/archive/2017/07/marion-tinsley-checkers/534111/
+[^9]: Spiegel. (2007, July 20). Dame-Brettspiel ist gelöst. Spiegel. https://www.spiegel.de/wissenschaft/mensch/kuenstliche-intelligenz-dame-brettspiel-ist-geloest-a-495493.html
+[^10]: Schaeffer, J., Björnsson, Y., Kishimoto, A., Müller, M., Lake, R., Lu, P., & Sutphen, S. (2007). Checkers Is Solved. Science, 317, 1518–1522. https://doi.org/10.1126/science.1144079
+[^11]: Bruderer, H. (2020). Artificial intelligence began in 1912 with the world’s first chess automaton built by Torres Quevedo. Communications of the ACM.
+[^12]: Kasparov, G., & Friedel, F. (2018). Reconstructing Turing’s “paper machine.” 40, 105–112.
 [^13]: Shannon
-[^14]: bernstein
-[^15]: bernstein2
-[^16]: levysbet
-[^17]: deepthought
-[^18]: history_deepblue
-[^19]: rybka
-[^20]: alphazero
-[^21]: ff2
-[^22]: komodo
-[^23]: nnue
+[^14]: Bernstein, Alex, & de V. Roberts, M. (1958). Computer v. Chess-Player. Scientific American, 198, 96–107.
+[^15]: Alex Bernstein & Colleagues Program an IBM 704 Computer to Defeat an Inexperienced Human Opponent. (n.d.). History of Information. Retrieved February 20, 2022, from https://www.historyofinformation.com/detail.php?id=5508
+[^16]: Levy’s Bet. (n.d.). Computer History Museum. Retrieved February 20, 2022, from https://www.computerhistory.org/chess/levys-bet/
+[^17]: Berliner, H. J. (1989). Deep Thought Wins Fredkin Intermediate Prize. AI Magazine, 10(2), 89. https://doi.org/10.1609/aimag.v10i2.753
+[^18]: Higgins, C. (2017, July 29). A Brief History of Deep Blue, IBM’s Chess Computer. Mental Floss. https://www.mentalfloss.com/article/503178/brief-history-deep-blue-ibms-chess-computer
+[^19]: Rybka. (n.d.). Chess.com. Retrieved February 20, 2022, from https://www.chess.com/terms/rybka-chess-engine
+[^20]: AlphaZero. (n.d.). Chess.com. Retrieved February 20, 2022, from https://www.chess.com/terms/alphazero-chess-engine
+[^21]: Benny, T. (2021, July 22). FAT FRITZ 2 – DIE FETTEN JAHRE SIND VORBEI. https://schach.computer/fat-fritz-2-die-fetten-jahre-sind-vorbei/
+[^22]: AlphaZero. (n.d.). Chess.com. Retrieved February 20, 2022, from https://www.chess.com/terms/komodo-chess-engine
+[^23]: Saumik. (2021, January 24). A Brief Guide to Stockfish NNUE. https://saumikn.com/blog/a-brief-guide-to-stockfish-nnue/
+[^24]: CCRL Blitz. (2022, February 19). http://ccrl.chessdom.com/ccrl/404/
+[^25]: Magnus Carlsen. (n.d.). International Chess Federation. Retrieved February 20, 2022, from https://ratings.fide.com/profile/1503014
+[^26]: Hamann, C.-M. (2019). Einführung in das Programmieren in LISP: Mit einem Anhang LISP-Dialekte für Personal Computer. De Gruyter. https://doi.org/doi:10.1515/9783110852202
+[^27]: Tromp, J. (n.d.). Number of legal Go positions. Retrieved February 20, 2022, from https://tromp.github.io/go/legal.html
+[^28]: Villanueva, J. C. (2009, July 30). How Many Atoms Are There in the Universe? https://www.universetoday.com/36302/atoms-in-the-universe/
+[^29]: Cho, A. (2016, January 27). “Huge leap forward”: Computer that mimics human brain beats professional at game of Go. https://www.science.org/content/article/huge-leap-forward-computer-mimics-human-brain-beats-professional-game-go
+[^30]: Silver, A. (2016, March 13). AlphaGo vs Lee Sedol: history in the making. https://en.chessbase.com/post/alphago-vs-lee-sedol-history-in-the-making
+[^31]: Kohs, G. (Ed.). (2020). AlphaGo - The Movie | Full award-winning documentary. DeepMind. https://www.youtube.com/watch?v=WXuK6gekU1Y
+[^32]: Wunderlich-Pfeiffer, F. (2016, March 10). Einer der weltbesten Go-Spieler verliert wieder gegen die KI. Golem. https://www.golem.de/news/alphago-klare-niederlage-auch-im-zweiten-spiel-1603-119683.html
+[^33]: Mozur, P. (2017, May 23). Google’s AlphaGo Defeats Chinese Go Master in Win for A.I. New York Times. https://www.nytimes.com/2017/05/23/business/google-deepmind-alphago-go-champion-defeat.html
+[^34]: Neuer Boom: Viele entdecken in Corona-Zeiten das Schach. (2021, February 2). Zeit. https://www.zeit.de/news/2021-02/02/neuer-boom-viele-entdecken-in-corona-zeiten-das-schach
+
+</div>
 
 ## 
 `;
