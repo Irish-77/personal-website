@@ -2,7 +2,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-// Import Pages
+// Pages
 import Landing from './pages/Landing';
 import Projects from './pages/Projects';
 import ProjectDisplay from './pages/ProjectDisplay';
@@ -10,9 +10,12 @@ import Blog from './pages/Blog';
 import BlogDisplay from './pages/BlogDisplay';
 import CV from './pages/CV';
 
-// Import Components
+// Components
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+
+// Services
+import ScrollToTop from './services/ScrollToTop';
 
 // Styles
 import './App.css';
@@ -22,6 +25,7 @@ function App() {
   return (
     <div className="App">
       <Router basename="/personal-website">
+        <ScrollToTop>
         <Navbar/>
         <Routes>
           <Route path="/" element={<Landing />} />
@@ -37,6 +41,7 @@ function App() {
           <Route path="/blog/:id" element={<BlogDisplay />} />
         </Routes>
         <Footer/>
+        </ScrollToTop>
       </Router>
     </div>
   );
