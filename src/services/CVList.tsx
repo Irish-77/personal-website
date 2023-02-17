@@ -11,6 +11,17 @@ export const CVList = [
 
     {
         type: 'education',
+        title: 'Enhancing my Mathematical Knowledge',
+        date: '2022-2023',
+        subtitle: 'Student',
+        location: 'Düssedorf',
+        institution: 'Heinrich-Heine-Universität (HHU)',
+        description: [
+            'A strong mathematical foundation for machine learning is of particular interest. This motivated me to strengthen my mathematical knowledge by taking the following courses of the mathematics bachelor (including the exam): Analysis I and Linear Algebra I.'
+        ],
+    },
+    {
+        type: 'education',
         title: 'B.Sc. Business Informatics with Data Science Specialization',
         date: '2019-2022',
         subtitle: 'Student',
