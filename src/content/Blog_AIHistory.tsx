@@ -2,7 +2,7 @@ export const blog_AI_History:string = `
 
 # Künstliche Intelligenz in Brettspielen
 
-> „Even if I become the number one, there is an entity that cannot be defeated.“ <br /><br />~ Lee Sedol, ehemaliger Go-Weltmeister
+> Even if I become the number one, there is an entity that cannot be defeated. <br /><br />~ Lee Sedol, ehemaliger Go-Weltmeister
 
 ## 1 Einleitung
 
@@ -42,7 +42,7 @@ Das andere Unterscheidungskriterium ist der Einfluss der Zufallskomponente. Spie
 | mit Zufall                  | Mensch ärgere Dich nicht     | Poker  |
 | ohne Zufall | Mühle, Schach, Go        | - |
 
-<div class="table-description"> 
+<div class="blog-object-description"> 
 Tabelle 1: Beispiele von Gesellschaftsspielen für die zwei relevanten Unterscheidungsmerkmalen
 </div>
 
@@ -121,12 +121,17 @@ Dadurch, dass das komplette Programm auf der CPU ausgeführt wird, werden länge
 | 2 | Dragon by Komodo 2.6 64-bit 8CPU        | 3721 |
 | 3 | Fat Fritz 2 (in SF) 64-bit 8CPU        | 3719 |
 
-<div class="table-description"> 
+
+
+<div class="blog-object-description"> 
 Tabelle 2:
 Überblick der drei besten Schachprogrammen (Stand: 19.02.2022).
 Stockfish 14 hat einen Elo von 3742.
-Im Gegensatz dazu hat der amtierende Schachweltmeister Magnus Carlsen in seiner besten Zeit ein Elo-Rating von "nur" 2882 Punkten.[^24] [^25]
+Im Gegensatz dazu hat der amtierende Schachweltmeister Magnus Carlsen in seiner besten Zeit ein Elo-Rating von "nur" 2882 Punkten.
+Quellen: 24, 25
 </div>
+
+
 
 
 ### 2.3 Go
@@ -169,7 +174,7 @@ Für das Forschungsgebiet innerhalb der künstlichen Intelligenz wird die Bedeut
 Zwar gibt es immer noch Maschine-vs.-Maschine-Wettbewerbe, in dem Teams weiterhin versuchen, eine "bessere" AI zu kreieren, allerdings wurde mit dem Sieg von AlphaGo in dem komplexesten Brettspiel Go der Sättigungspunkt bzw. der eigentliche Meilenstein erreicht.
 Ein Großteil der Investitionen wird vermutlich in andere Problemstellungen fließen.
 
-<div class="footnotes">
+<div class="blog-footnotes">
 
 [^1]: Go game master quits saying machines “cannot be defeated.” (2019, November 27). The Guardian. https://www.theguardian.com/world/2019/nov/27/go-game-master-quits-saying-machines-cannot-be-defeated
 [^2]: Zapf, H. (n.d.). DER BILDUNGSWERT DES SCHACH - EINE VERGLEICHENDE UNTERSUCHUNG. Deutscher Schachbund. Retrieved February 20, 2022, from https://www.schachbund.de/bildungswert-des-schach.html
