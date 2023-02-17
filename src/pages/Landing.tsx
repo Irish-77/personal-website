@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Typical from 'react-typical';
-import ParticlesBackground from '../components/ParticlesBackground';
 
 import my_image from './../assets/landing/me.jpg';
 

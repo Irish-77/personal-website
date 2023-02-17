@@ -14,7 +14,7 @@ Calculate the value of $s$ when $u = 10\\frac{m}{s}$ and $a = 2\\frac{m}{s^{2}}$
 
 ## asd 12
 
-<img src="%%URL%%/project_image_pacman.jpeg" alt="Text">
+<img src="%%URL%%/assets/blog/project_image_pacman.jpeg" alt="Text">
 
 ## Tasklist
 

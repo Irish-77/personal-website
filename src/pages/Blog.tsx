@@ -15,7 +15,6 @@ function Blog() {
   return (
 
     <div className="blog-posts">
-      <h1> My Personal Blog Page </h1>
       <div className="blog-post-list">
         {BlogList.map((blogPosts, idx) => {
           return <BlogItem id={idx} title={blogPosts.title} image={blogPosts.image} summary={blogPosts.summary} />

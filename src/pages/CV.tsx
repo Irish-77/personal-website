@@ -20,7 +20,6 @@ function CV() {
 
   return (
     <div className='cv'>
-      <h1> My Curriculum Vitae </h1>
       <VerticalTimeline lineColor="#3e497a">
 
         {CVList.map((cv_item) => {
