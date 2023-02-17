@@ -1,22 +1,32 @@
 // General Imports
 import React from 'react';
-// import { useNavigate } from 'react-router-dom';
 
-function ProjectItem({image, name, id, skills, repoURL}: any) {
+import ProjectCard from './ProjectCard';
 
-    // const navigate = useNavigate();
+import { CSSTransition } from 'react-transition-group';
+import { useState } from 'react';
+
+
+function ProjectItem({ image, name, description, id, skills, repoURL }: any) {
+
+    const [showFront, setShowFront] = useState(true);
 
     return (
-        <div
-            className="project-item"
-            onClick={() => {
-                // navigate("/project/" + id);
-                window.location.href = repoURL;
-            }}
-        >
-            <div style={{ backgroundImage: `url(${image})` }} className="project-image" />
-            <h1> {name} </h1>
-            <p> {skills} </p>
+        <div className="project-item">
+            <CSSTransition
+                in={showFront}
+                timeout={300}
+                classNames='flip'
+            >
+                <ProjectCard onClick={() => {
+                    setShowFront((v) => !v);
+                }}
+                id={id} name={name} description={description} image={image} skills={skills} repoURL={repoURL} 
+                />
+
+            </CSSTransition>
+   
+        
         </div>
     )
 }

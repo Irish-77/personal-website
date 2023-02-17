@@ -1,0 +1,62 @@
+.card {
+  /* Sizing */
+  height: 100%;
+  width: 100%;
+
+  transform-style: preserve-3d;
+
+  /* Content Alignment */
+  position: relative;
+
+  user-select: none;
+  cursor: pointer;
+}
+
+.card-front,
+.card-back {
+  /* Sizing */
+  height: 100%;
+  width: 92%;
+  margin-left: 4%;
+  margin-right: 4%;
+  font-size: 80%;
+
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  /* Alignment */
+  position: absolute;
+
+  /* Content Alignment */
+  padding-top: 10px;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.card-back {
+  
+}
+
+.project-card-bottom-section {
+  padding-top: 10px;
+}
+
+.project-card-bottom-section > hr {
+  margin-top: 10px;
+  padding: 0;
+}
+
+.project-card-git-repo {
+  margin-left: 80%;
+  margin-top: 10px;
+}
+
+.card-front {
+
+}
+
+.card-back {
+
+  transform: rotateY(180deg);
+}

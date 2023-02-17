@@ -7,12 +7,32 @@
 // }
 
 import PacmanImage from '../assets/projects/project_image_pacman.jpeg';
+import PersonalWebsite from '../assets/projects/PersonalWebsite.png';
 import ICS from '../assets/projects/ICS.png';
 import G2G from '../assets/projects/c2g.png';
 import AIC from '../assets/projects/AIC.png';
+import ALKA from '../assets/projects/alka.jpeg';
 import CoinCounter from '../assets/projects/CoinCounter.png';
 
 export const ProjectList = [
+    {
+        name: 'Active Lane Keeping Assistant',
+        context: 'University Project',
+        image: ALKA,
+        skills: 'Computer Vision, Carla',
+        stack: 'Python, Numpy, OpenCV',
+        repoURL: 'https://github.com/Ronho/active-lane-keeping-assistant',
+        description: ''        
+    },
+    {
+        name: 'My Personal Website',
+        context: '',
+        image: PersonalWebsite,
+        skills: 'Frontend, CI/CD Pipeline',
+        stack: 'React, Typescript, Github Actions',
+        repoURL: 'https://github.com/Irish-77/personal-website',
+        description: ''        
+    },
     {
         name: 'Pacman AI',
         context: 'Machine Learning, Data Science',

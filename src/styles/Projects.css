@@ -30,7 +30,6 @@
     height: 300px;
     margin: 40px;
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-    text-align: center;
 }
 
 .project-item:hover {
@@ -54,6 +53,7 @@
 }
 
 .project-item p {
+    margin-left: 70%;
     font-size: 18px;
     font-style: italic;
     color: orange;
