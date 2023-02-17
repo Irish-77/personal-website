@@ -7,6 +7,10 @@
 // }
 
 import PacmanImage from '../assets/projects/project_image_pacman.jpeg';
+import ICS from '../assets/projects/ICS.png';
+import G2G from '../assets/projects/c2g.png';
+import AIC from '../assets/projects/AIC.png';
+import CoinCounter from '../assets/projects/CoinCounter.png';
 
 export const ProjectList = [
     {
@@ -16,87 +20,46 @@ export const ProjectList = [
         skills: 'Python, Reinforcment Learning',
         stack: '',
         repoURL: 'https://github.com/Irish-77/pacman-ai3',
-        description: 'Description'        
+        description: ''        
     },
     {
-        name: 'Pacman AI',
-        context: 'Machine Learning, Data Science',
-        image: PacmanImage,
-        skills: 'Python, Reinforcment Learning',
+        name: 'AIC Secruity',
+        context: '',
+        image: AIC,
+        skills: '',
         stack: '',
-        repoURL: 'https://github.com/Irish-77/pacman-ai3',
-        description: 'Description'
+        repoURL: 'https://github.com/Ronho/aic_security',
+        description: ''
         
     },
     {
-        name: 'Pacman AI',
-        context: 'Machine Learning, Data Science',
-        image: PacmanImage,
-        skills: 'Python, Reinforcment Learning',
+        name: 'Coin2Gether',
+        context: 'Web Development (Full-Stack), Data Science',
+        image: G2G,
+        skills: 'Python, Angular2, PostgreSQL, Flask, Social Networks, Collaborative Filtering, Chatbot',
         stack: '',
-        repoURL: 'https://github.com/Irish-77/pacman-ai3',
-        description: 'Description'
+        repoURL: 'https://github.com/Irish-77/C2G-Goes-AI',
+        description: ''
         
     },
     {
-        name: 'Pacman AI',
-        context: 'Machine Learning, Data Science',
-        image: PacmanImage,
-        skills: 'Python, Reinforcment Learning',
+        name: 'Coin Counter',
+        context: '',
+        image: CoinCounter,
+        skills: '',
         stack: '',
-        repoURL: 'https://github.com/Irish-77/pacman-ai3',
-        description: 'Description'
+        repoURL: 'https://github.com/Ronho/coin-counter-2-gether',
+        description: ''
         
     },
     {
-        name: 'Pacman AI',
-        context: 'Machine Learning, Data Science',
-        image: PacmanImage,
-        skills: 'Python, Reinforcment Learning',
+        name: 'Intelligent Charging Station',
+        context: '',
+        image: ICS,
+        skills: '',
         stack: '',
-        repoURL: 'https://github.com/Irish-77/pacman-ai3',
-        description: 'Description'
+        repoURL: 'https://github.com/Ronho/intelligent-charging-station',
+        description: ''
         
     },
-    {
-        name: 'Pacman AI',
-        context: 'Machine Learning, Data Science',
-        image: PacmanImage,
-        skills: 'Python, Reinforcment Learning',
-        stack: '',
-        repoURL: 'https://github.com/Irish-77/pacman-ai3',
-        description: 'Description'
-        
-    },
-    {
-        name: 'Pacman AI',
-        context: 'Machine Learning, Data Science',
-        image: PacmanImage,
-        skills: 'Python, Reinforcment Learning',
-        stack: '',
-        repoURL: 'https://github.com/Irish-77/pacman-ai3',
-        description: 'Description'
-        
-    },
-    {
-        name: 'Pacman AI',
-        context: 'Machine Learning, Data Science',
-        image: PacmanImage,
-        skills: 'Python, Reinforcment Learning',
-        stack: '',
-        repoURL: 'https://github.com/Irish-77/pacman-ai3',
-        description: 'Description'
-        
-    },
-    {
-        name: 'Pacman AI',
-        context: 'Machine Learning, Data Science',
-        image: PacmanImage,
-        skills: 'Python, Reinforcment Learning',
-        stack: '',
-        repoURL: 'https://github.com/Irish-77/pacman-ai3',
-        description: 'Description'
-        
-    },
-
 ]
