@@ -1,19 +1,19 @@
-p {
+.blog-post > p {
     font-weight: 300;
     line-height: 2;
     color: #3a4145;
     margin-bottom: 30px;
 }
 
-.cover {
-    height: 65vh;
-    min-height: 180px;
-    position: relative;
+.blog-cover {
+    height: auto;
+    min-height: 60vh;
     width: 100%;
-    height: 100vh;
     margin-bottom: 5rem;
-    background-size: cover;
     overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .blog-post {
@@ -21,8 +21,8 @@ p {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
-    text-align: justify;
     font-size: 130%;
+    text-align: justify;
 }
 
 .blog-post > h1 {
@@ -86,18 +86,23 @@ blockquote p {
     font-style: italic;
 }
 
-li>p {
-    margin: 0;
-}
+/* li>p {
+    margin: 20;
+} */
 
-.table-description {
+.blog-object-description {
     text-align: center;
     margin-left: 15px;
     margin-left: 15px;
     font-size: 80%;
 }
 
-.footnotes {
+.blog-footnotes {
     font-size: 60%;
     margin-bottom: 0px !important;
+}
+
+.blog-box {
+    border: 5px solid grey;
+    padding: 15px;
 }

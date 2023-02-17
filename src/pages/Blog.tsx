@@ -14,9 +14,9 @@ function Blog() {
 
   return (
 
-    <div className="projects">
+    <div className="blog-posts">
       <h1> My Personal Blog Page </h1>
-      <div className="projectList">
+      <div className="blog-post-list">
         {BlogList.map((blogPosts, idx) => {
           return <BlogItem id={idx} title={blogPosts.title} image={blogPosts.image} summary={blogPosts.summary} />
         })}

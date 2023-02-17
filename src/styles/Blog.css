@@ -1,4 +1,4 @@
-.projects {
+.blog-posts {
     width: 100%;
     height: auto;
     display: flex;
@@ -7,14 +7,14 @@
     flex-direction: column;
 }
 
-.projects .projectTitle {
+.blog-posts .projectTitle {
     text-align: center;
     color: #3e497a;
     font-size: 60px;
     font-weight: bolder;
 }
 
-.projectList {
+.blog-post-list {
     width: 70vw;
     height: auto;
     display: grid;
@@ -22,10 +22,9 @@
     place-items: center;
 }
 
-
 /* MENU ITEM STYLING */
 
-.projectItem {
+.blog-entry {
     border-radius: 15px;
     width: 300px;
     height: 300px;
@@ -34,13 +33,13 @@
     text-align: center;
 }
 
-.projectItem:hover {
+.blog-entry:hover {
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
     transition: 0.3s ease-in;
     cursor: pointer;
 }
 
-.projectItem .bgImage {
+.blog-entry .blog-image {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     width: 100%;
@@ -50,34 +49,34 @@
     background-size: cover;
 }
 
-.projectItem h1 {
+.blog-entry h1 {
     font-size: 25px;
 }
 
-.projectItem p {
+.blog-entry p {
     font-size: 18px;
     font-style: italic;
     color: orange;
 }
 
 @media only screen and (max-width: 1300px) {
-    .projectList {
+    .blog-post-list {
         grid-template-columns: 1fr 1fr;
     }
 }
 
 @media only screen and (max-width: 800px) {
-    .projectList {
+    .blog-post-list {
         grid-template-columns: 1fr;
     }
 }
 
 @media only screen and (max-width: 800px) {
-    .projectList {
+    .blog-post-list {
         width: 100%;
     }
 
-    .projectItem {
+    .blog-entry {
         width: 300px;
         height: 300px;
     }
