@@ -28,7 +28,7 @@ function Landing() {
           </div>
           <div className="text-container">
             <h1 className="main-header">Hey, I'm Basti</h1>
-            <p>
+            <p className="landing-intro">
               I'm a {" "}
               <Typical wrapper="b" steps={steps} loop={1} className="typical" />
             </p>
