@@ -8,12 +8,12 @@ function BlogItem({image, title, id, summary}: any) {
 
     return (
         <div
-            className="projectItem"
+            className="blog-entry"
             onClick={() => {
                 navigate("/blog/" + id);
             }}
         >
-            <div style={{ backgroundImage: `url(${image})` }} className="bgImage" />
+            <div style={{ backgroundImage: `url(${image})` }} className="blog-image" />
             <h1> {title} </h1>
             <p> {summary} </p>
         </div>
