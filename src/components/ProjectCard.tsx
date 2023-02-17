@@ -24,7 +24,7 @@ function ProjectCard({ onClick, image, name, description, id, skills, repoURL }:
                 { skills }
                 <div className="project-card-bottom-section">
                 <hr />
-                <a href={ repoURL } target="_blank"><GitHubIcon className="project-card-git-repo"/> </a>
+                <a href={ repoURL } target="_blank" rel="noreferrer"><GitHubIcon className="project-card-git-repo"/> </a>
                 </div>
                 
 

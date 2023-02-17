@@ -39,8 +39,8 @@ function Footer() {
               <a href="https://www.instagram.com/bastiberle/"><InstagramIcon className="ft-social-icon"/> </a>
               <a href="https://twitter.com/BastianBerle"><TwitterIcon className="ft-social-icon"/> </a>
               <a href="https://www.linkedin.com/in/bastian-berle/"><LinkedInIcon className="ft-social-icon"/> </a>
-              <a href="#"><GitHubIcon className="ft-social-icon"/> </a>
-              <a href="#"><EmailIcon className="ft-social-icon"/> </a>
+              <a href="https://github.com/Irish-77"><GitHubIcon className="ft-social-icon"/> </a>
+              {/* <a href="#"><EmailIcon className="ft-social-icon"/> </a> */}
             </div>
           </div>
         </div>

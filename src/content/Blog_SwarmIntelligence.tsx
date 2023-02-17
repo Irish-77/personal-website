@@ -138,7 +138,7 @@ Für den Ablauf des Algorithmus ist es notwendig, dass die Partikel untereinande
 Die Fortbewegung der Partikel hängt von der Geschwindigkeit und Richtung ab.
 Die Richtung und somit die neue Position setzt sich aus der aktuellen Richtung des Partikels, den Koordinaten des bisher individuellen Bestwerts und den Koordinaten des globalen Bestwerts zusammen (siehe Abbildung 2.1).
 Der globale Bestwert entspricht entweder dem aller $N$ Partikel oder dem seiner engsten Nachbarschaft.
-Floreano et al. empfehlen eine Schwarmgröße, die im Bereich von $ [20, 200] $ Partikeln liegt und eine Nachbarschaftspopulation, die etwa 10\% der Gesamtmenge $N$ ausmacht.[^15]
+Floreano et al. empfehlen eine Schwarmgröße, die im Bereich von $ [20, 200] $ Partikeln liegt und eine Nachbarschaftspopulation, die etwa 10% der Gesamtmenge $N$ ausmacht.[^15]
 
 <img src="%%URL%%/assets/blog/pso.jpg" alt="Text">
 
@@ -217,4 +217,4 @@ Allerdings hängt der Ausgang der Wahl davon ab, ob die Teilnehmer im Schwarm of
 
 </div>
 
-`
+`;
