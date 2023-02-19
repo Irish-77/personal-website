@@ -62,7 +62,7 @@ export const CVList = [
     {
         type: 'education',
         title: 'A-levels (Abitur)',
-        date: '2019-2022',
+        date: '2016-2019',
         subtitle: 'Student',
         location: 'Ratingen',
         institution: 'Adam-Josef-Cüppers-Berufskolleg',
