@@ -57,6 +57,14 @@
 }
 
 .card-back {
-
   transform: rotateY(180deg);
+}
+
+.card-title {
+  margin-top: 100px;
+}
+
+.card-information > * {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }

@@ -7,7 +7,7 @@ import { CSSTransition } from 'react-transition-group';
 import { useState } from 'react';
 
 
-function ProjectItem({ image, name, description, id, skills, repoURL }: any) {
+function ProjectItem({ image, name, description, id, stack, skills, repoURL }: any) {
 
     const [showFront, setShowFront] = useState(true);
 
@@ -21,7 +21,7 @@ function ProjectItem({ image, name, description, id, skills, repoURL }: any) {
                 <ProjectCard onClick={() => {
                     setShowFront((v) => !v);
                 }}
-                id={id} name={name} description={description} image={image} skills={skills} repoURL={repoURL} 
+                id={id} name={name} description={description} image={image} skills={skills} stack={stack} repoURL={repoURL} 
                 />
 
             </CSSTransition>

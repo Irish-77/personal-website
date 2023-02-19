@@ -15,7 +15,7 @@ function Projects() {
     <div className="projects">
       <div className="project-list">
         {ProjectList.map((project, idx) => {
-          return <ProjectItem id={idx} name={project.name} description={project.description} image={project.image} skills={project.skills} repoURL={project.repoURL} />
+          return <ProjectItem id={idx} name={project.name} description={project.description} image={project.image} stack={project.stack} skills={project.skills} repoURL={project.repoURL} />
         })}
 
       </div>
