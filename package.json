@@ -34,7 +34,8 @@
   },
   "scripts": {
     "predeploy": "env-cmd -f .env.dev npm run build",
-    "deploy": "gh-pages -d build",
+    "add-domain": "echo \"berle.dev\" > CNAME",
+    "deploy": "npm run add-domain && gh-pages -d build",
     "start:dev": "env-cmd -f .env.dev react-scripts start",
     "start:prod": "env-cmd -f .env.prod react-scripts start",
     "build:dev": "env-cmd -f .env.dev react-scripts build",
