@@ -24,7 +24,8 @@ function App() {
   console.log(process.env.REACT_APP_BASE_URL)
   return (
     <div className="App">
-      <Router basename="/personal-website">
+      {/* <Router basename="/personal-website"> */}
+      <Router>
         <ScrollToTop>
         <Navbar/>
         <Routes>
