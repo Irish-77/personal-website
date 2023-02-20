@@ -23,6 +23,9 @@ jobs:
         run: npm install --force
       - name: Build the project
         run: npm run build:prod --if-present
+
+      - name: Configure CMake
+        run: npm run add-domain
         
       - run: git config user.name github-actions
         shell: bash
