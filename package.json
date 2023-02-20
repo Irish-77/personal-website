@@ -35,11 +35,11 @@
   "scripts": {
     "predeploy": "env-cmd -f .env.dev npm run build",
     "add-domain": "echo \"berle.dev\" > build/CNAME",
-    "deploy": "npm run add-domain && gh-pages -d build",
+    "deploy": "gh-pages -d build",
     "start:dev": "env-cmd -f .env.dev react-scripts start",
     "start:prod": "env-cmd -f .env.prod react-scripts start",
     "build:dev": "env-cmd -f .env.dev react-scripts build",
-    "build:prod": "env-cmd -f .env.prod react-scripts build",
+    "build:prod": "npm run add-domain && env-cmd -f .env.prod react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
