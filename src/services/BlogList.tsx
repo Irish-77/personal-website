@@ -1,7 +1,7 @@
 // Content of Blog Posts
 // import { exampleBlogContent } from '../content/ExampleBlogPost'
-import { blog_AI_History } from '../content/Blog_AIHistory'
-import { blog_SwarmIntelligence } from '../content/Blog_SwarmIntelligence'
+import { blog_AI_History } from '../content/Blog_AIHistory';
+import { blog_SwarmIntelligence } from '../content/Blog_SwarmIntelligence';
 
 // Thumbnails
 // import ExampleWallpaper from '../assets/blog/wallpaper.jpg';

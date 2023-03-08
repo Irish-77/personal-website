@@ -140,7 +140,7 @@ Die Richtung und somit die neue Position setzt sich aus der aktuellen Richtung d
 Der globale Bestwert entspricht entweder dem aller $N$ Partikel oder dem seiner engsten Nachbarschaft.
 Floreano et al. empfehlen eine Schwarmgröße, die im Bereich von $ [20, 200] $ Partikeln liegt und eine Nachbarschaftspopulation, die etwa 10% der Gesamtmenge $N$ ausmacht.[^15]
 
-<img src="%%URL%%/assets/blog/pso.jpg" alt="Text">
+<img src="%%URL%%/assets/blog/pso.jpg" alt="Partikelschwarmoptimierung">
 
 <div class="blog-object-description"> 
 Abbildung 2.1:
@@ -205,7 +205,7 @@ Allerdings hängt der Ausgang der Wahl davon ab, ob die Teilnehmer im Schwarm of
 [^6]: Hamann, H. (2019). Szenarien. In Schwarmintelligenz (pp. 45–67). Springer Berlin Heidelberg. https://doi.org/10.1007/978-3-662-58961-8_3
 [^7]: Bogon, T. (2013). Künstliche Intelligenz und Optimierung. In Agentenbasierte Schwarmintelligenz (pp. 11–38). Springer Fachmedien Wiesbaden. https://doi.org/10.1007/978-3-658-02292-1_2
 [^8]: Dorigo, M., Birattari, M., & Stützle, T. (2006). Ant Colony Optimization. Computational Intelligence Magazine, IEEE, 1, 28–39. https://doi.org/10.1109/MCI.2006.329691
-[^9]: Bonabeau, E., Dorigo, M., & Theraulaz, G. (2001). Swarm Intelligence : From Natural to Artificial Systems / E. Bonabeau, M. Dorigo, G. Theraulaz.
+[^9]: Bonabeau, E., Dorigo, M., & Theraulaz, G. (2001). Swarm Intelligence: From Natural to Artificial Systems / E. Bonabeau, M. Dorigo, G. Theraulaz.
 [^10]: Tuba, M., & Jovanovic, R. (2009). An analysis of different variations of ant colony optimization to the minimum weight vertex cover problem. WSEAS Transactions on Information Science and Applications, 6.
 [^11]: Thapar, P., & Batra, U. (2018). Implementation of Ant Colony Optimization in Routing Protocol for Internet of Things (pp. 151–164). https://doi.org/10.1007/978-981-10-4555-4_10
 [^12]: Sekaran, R., Kumar Munnangi, A., Rajeyyagari, S., Ramachandran, M., & Al-Turjman, F. (2021). Ant colony resource optimization for Industrial IoT and CPS. International Journal of Intelligent Systems. https://doi.org/https://doi.org/10.1002/int.22636
