@@ -1,5 +1,5 @@
 // General
-import React from 'react'
+import React, { useEffect } from 'react';
 import { useParams } from "react-router-dom";
 
 // Components
@@ -18,11 +18,12 @@ import '../styles/BlogDisplay.css';
 
 function BlogDisplay() {
 
+  useEffect(() => {
+    document.title = 'Blog';
+  }, []);
+
   const { id } = useParams();
   const blogPost = BlogList[id];
-
-  console.log(process.env.REACT_APP_BASE_URL);
-
 
   return (
     <div>

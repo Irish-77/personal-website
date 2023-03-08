@@ -1,5 +1,5 @@
 // Imports
-import React from 'react';
+import React, { useEffect } from 'react';
 
 // Components
 import ProjectItem from '../components/ProjectItem';
@@ -11,6 +11,11 @@ import { ProjectList } from '../services/ProjectList';
 import '../styles/Projects.css';
 
 function Projects() {
+
+  useEffect(() => {
+    document.title = 'Projects';
+  }, []);
+
   return (
     <div className="projects">
       <div className="project-list">

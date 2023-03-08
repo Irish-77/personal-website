@@ -1,5 +1,5 @@
-// Imports
-import React from 'react';
+// General
+import React, { useEffect } from 'react';
 
 // Components
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
@@ -14,6 +14,10 @@ import '../styles/CV.css';
 import 'react-vertical-timeline-component/style.min.css';
 
 function CV() {
+
+  useEffect(() => {
+    document.title = 'CV';
+  }, []);
 
   const vertical_timeline_element_base = 'vertical-timeline-element--';
   var vertical_timeline_element: string;

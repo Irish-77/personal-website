@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import Typical from 'react-typical';
 
@@ -16,6 +16,12 @@ const steps = [
 ];
 
 function Landing() {
+
+  useEffect(() => {
+    document.title = 'Home';
+  }, []);
+
+
   return (
     <div>
 

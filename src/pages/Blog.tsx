@@ -1,5 +1,5 @@
 // General
-import React from 'react'
+import React, { useEffect } from 'react';
 
 // Components
 import BlogItem from '../components/BlogItem';
@@ -11,6 +11,10 @@ import { BlogList } from '../services/BlogList'
 import '../styles/Blog.css';
 
 function Blog() {
+
+  useEffect(() => {
+    document.title = 'Blog';
+  }, []);
 
   return (
 

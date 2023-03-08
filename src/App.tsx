@@ -1,5 +1,5 @@
 // General Imports
-import React from 'react'
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Pages
@@ -21,7 +21,7 @@ import ScrollToTop from './services/ScrollToTop';
 import './App.css';
 
 function App() {
-  console.log(process.env.REACT_APP_BASE_URL)
+
   return (
     <div className="App">
       {/* <Router basename="/personal-website"> */}
