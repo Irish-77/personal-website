@@ -25,6 +25,8 @@ function BlogDisplay() {
   const { id } = useParams();
   const blogPost = BlogList[id];
 
+  console.log("1 ", process.env.REACT_APP_BASE_URL);
+
   return (
     <div>
       <div style={{ backgroundImage: `url(${blogPost.image})` }} className="blog-cover" />
