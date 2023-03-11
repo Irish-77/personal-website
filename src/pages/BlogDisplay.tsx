@@ -25,7 +25,7 @@ function BlogDisplay() {
   const { id } = useParams();
   const blogPost = BlogList[id];
 
-  console.log("1 ", process.env.REACT_APP_BASE_URL);
+  console.log(process.env.REACT_APP_BASE_URL);
 
   return (
     <div>
