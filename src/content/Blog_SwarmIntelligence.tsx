@@ -140,7 +140,7 @@ Die Richtung und somit die neue Position setzt sich aus der aktuellen Richtung d
 Der globale Bestwert entspricht entweder dem aller $N$ Partikel oder dem seiner engsten Nachbarschaft.
 Floreano et al. empfehlen eine Schwarmgröße, die im Bereich von $ [20, 200] $ Partikeln liegt und eine Nachbarschaftspopulation, die etwa 10% der Gesamtmenge $N$ ausmacht.[^15]
 
-<img src="%%URL%%/assets/blog/pso.jpg" alt="Partikelschwarmoptimierung">
+<img src="%%URL%%/pso.jpg" alt="Partikelschwarmoptimierung">
 
 <div class="blog-object-description"> 
 Abbildung 2.1:
