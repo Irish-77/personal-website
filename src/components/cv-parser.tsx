@@ -11,7 +11,8 @@ function CVParser() {
   useEffect(() => {
     const fetchData = async () => {
       const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
-      const res = await fetch('${basePath}/assets/data/CVList.json');
+      const url = `${basePath}/assets/data/CVList.json`;
+      const res = await fetch(url);
       const data = await res.json();
       setCVList(data);
     };
