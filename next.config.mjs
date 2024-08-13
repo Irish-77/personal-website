@@ -1,5 +1,11 @@
 import { build } from "velite";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
+module.exports = {
+  basePath,
+};
+
 /** @type {import('next').NextConfig} */
 export default {
   // othor next config here...
