@@ -1,11 +1,5 @@
 import { build } from "velite";
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
-
-module.exports = {
-  basePath,
-};
-
 /** @type {import('next').NextConfig} */
 export default {
   // othor next config here...
@@ -13,6 +7,7 @@ export default {
     config.plugins.push(new VeliteWebpackPlugin());
     return config;
   },
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH || ''
 };
 
 class VeliteWebpackPlugin {
