@@ -26,7 +26,9 @@ export function ExpandableCards() {
   // Fetch the cards data from the JSON file
   useEffect(() => {
     async function fetchProjectsData() {
-      const response = await fetch('/assets/data/ProjectsList.json');
+      const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+      const url = `${basePath}/assets/data/ProjectsList.json`;
+      const response = await fetch(url);
       const data = await response.json();
       setProjects(data);
     }
