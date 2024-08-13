@@ -1,5 +1,3 @@
-export const dynamic = 'force-dynamic';
-
 import { posts } from "#site/content";
 import { PostItem } from "@/components/post-item";
 import { QueryPagination } from "@/components/query-pagination";
@@ -32,7 +30,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
   );
 
   const tags = getAllTags(posts);
-  const languages = getAllLanguages(posts);
+  // const languages = getAllLanguages(posts);
   const sortedTags = sortTagsByCount(tags);
 
 
