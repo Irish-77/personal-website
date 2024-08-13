@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import { posts } from "#site/content";
 import { PostItem } from "@/components/post-item";
 import { QueryPagination } from "@/components/query-pagination";
