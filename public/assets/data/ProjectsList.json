@@ -13,7 +13,6 @@
             "Numpy",
             "OpenCV",
             "Carla",
-            "PID-Controller",
             "Matplotlib"
         ],
         "repoURL": "https://github.com/C2G-BR/Active-Lane-Keeping-Assistant",
