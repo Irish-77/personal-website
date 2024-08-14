@@ -7,7 +7,9 @@ export default {
     config.plugins.push(new VeliteWebpackPlugin());
     return config;
   },
-  basePath: process.env.NEXT_PUBLIC_BASE_PATH || ''
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
+  // output: 'export',
+  staticDirs: [{ from: '../public/static', to: '/static' }],
 };
 
 class VeliteWebpackPlugin {
