@@ -40,7 +40,7 @@ export const HeroSection = () => {
             className="relative w-full h-full"
           >
             <Avatar className="rounded-lg">
-              <AvatarImage className="rounded-lg" src="/static/me.jpg" alt="Bastian Berle" />
+              <AvatarImage className="rounded-lg" src="/assets/me.jpg" alt="Bastian Berle" />
               <AvatarFallback>BB</AvatarFallback>  
                 
               
