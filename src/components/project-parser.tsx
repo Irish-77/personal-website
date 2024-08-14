@@ -27,7 +27,7 @@ export function ExpandableCards() {
   useEffect(() => {
     async function fetchProjectsData() {
       const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
-      const url = `${basePath}/assets/data/ProjectsList.json`;
+      const url = `${basePath}/static/data/ProjectsList.json`;
       const response = await fetch(url);
       const data = await response.json();
       setProjects(data);

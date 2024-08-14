@@ -24,7 +24,7 @@ const posts = defineCollection({
       language: s.string().default("English"),
       tags: s.array(s.string()).optional(),
       body: s.mdx(),
-      image: s.string().optional().default("/assets/images/blog/wallpaper.jpg"), // path to image
+      image: s.string().optional().default("/static/blog/wallpaper.jpg"), // path to image
     })
     .transform(computedFields),
 });
@@ -33,8 +33,8 @@ export default defineConfig({
   root: "content",
   output: {
     data: ".velite",
-    assets: "public/assets",
-    base: "/assets/", // /static/
+    assets: "public/static",
+    base: "/static/", // /static/
     name: "[name]-[hash:6].[ext]",
     clean: true,
   },
