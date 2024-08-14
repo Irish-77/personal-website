@@ -76,9 +76,9 @@ export default async function PostPage({ params }: PostPageProps) {
           titleComponent={
             <>
               <h1 className="text-4xl font-semibold text-black dark:text-white">
-                Künstliche Intelligenz in<br />
+                {post.title_line_1}<br />
                 <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
-                  Brettspielen
+                  {post.title_line_2}
                 </span>
               </h1>
             </>
