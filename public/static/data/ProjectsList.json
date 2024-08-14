@@ -2,7 +2,7 @@
     {
         "title": "Active Lane Keeping Assistant (ALKA)",
         "context": "University",
-        "image": "/static/projects/ALKA.png",
+        "image": "/assets/images/projects/ALKA.png",
         "skills": [
             "Computer Vision",
             "Control Theory",
@@ -22,7 +22,7 @@
     {
         "title": "Drone Secruity",
         "context": "University",
-        "image": "/static/projects/AIC.png",
+        "image": "/assets/images/projects/AIC.png",
         "skills": [
             "Arduino",
             "Sensor",
@@ -43,7 +43,7 @@
     {
         "title": "Pacman AI",
         "context": "Machine Learning, Data Science",
-        "image": "/static/projects/Pacman.png",
+        "image": "/assets/images/projects/Pacman.png",
         "skills": [
             "Python",
             "Reinforcment Learning"
@@ -61,7 +61,7 @@
     {
         "title": "Intelligent Charging Station (ICS)",
         "context": "University",
-        "image": "/static/projects/ICS.png",
+        "image": "/assets/images/projects/ICS.png",
         "skills": [
             "Fullstack",
             "Reinforcement Learning"
@@ -81,7 +81,7 @@
     {
         "title": "Coin2Gether",
         "context": "University",
-        "image": "/static/projects/c2g.png",
+        "image": "/assets/images/projects/c2g.png",
         "skills": [
             "Web Development (Full-Stack)",
             "Chatbot",
@@ -105,7 +105,7 @@
     {
         "title": "Coin Counter",
         "context": "University",
-        "image": "/static/projects/CC.png",
+        "image": "/assets/images/projects/CC.png",
         "skills": [
             "API",
             "Object Detection",
@@ -125,7 +125,7 @@
     {
         "title": "PyML - a simple machine learning library",
         "context": "Private",
-        "image": "/static/projects/PyML.jpeg",
+        "image": "/assets/images/projects/PyML.jpeg",
         "skills": [
             "Machine Learning",
             "Neural Networks"
@@ -144,7 +144,7 @@
     {
         "title": "My Personal Website",
         "context": "Private",
-        "image": "/static/projects/website.png",
+        "image": "/assets/images/projects/website.png",
         "skills": [
             "Frontend",
             "CI/CD Pipeline"
