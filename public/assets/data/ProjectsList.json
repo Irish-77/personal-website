@@ -76,7 +76,7 @@
         ],
         "repoURL": "https://github.com/C2G-BR/Intelligent-Charging-Station",
         "repoText": "Github",
-        "description": "ICS is a platform designed to provide intelligent charging to charging station operators in order to further minimize grid utilization.  In the process, a custom environment was developed on which an agent was trained using reinforcement learning.   In a comparison, the trained AI outperforms a first-come-first-served algorithm. In addition, the business is offered a front-end interface that provides a visual overview of the charging stations and the charging progression of the connected vehicles."
+        "description": "ICS is a platform designed to provide intelligent charging to charging station operators in order to further minimize grid utilization.  In the process, a custom environment was developed on which an agent was trained using reinforcement learning. In a comparison, the trained AI outperforms a first-come-first-served algorithm. In addition, a front-end interface offers a visual overview of the charging stations and the charging progression of the connected vehicles."
     },
     {
         "title": "Coin2Gether",
@@ -120,7 +120,9 @@
         ],
         "repoURL": "https://github.com/C2G-BR/Coin-Counter-2-Gether",
         "repoText": "Github",
-        "description": "With Coin Detector App you can take a picture of your Euro coins. The AI trained with custom labeled data calculates the value of the coins and tells you how many coins are in the picture and the cumulative value of these coins. The app is used to take the photo, which is sent to the backend. Then the AI (Faster R-CNN with MobileNet Backbone) calculates the value of the coins. Afterwards, the recognized coins are labeled in the app. Using Ngrok, the home computer can be utilized as a server. The app development was not my area of responsibility."
+        "projectURL": "https://www.kaggle.com/datasets/bastianberle/eurocoins-images-object-detection",
+        "projectText": "kaggle",
+        "description": "With our Coin Detector App you can take a picture of your Euro coins. The AI trained with custom labeled data calculates the value of the coins and tells you how many coins are in the picture and the cumulative value of these coins (we published our dataset on Kaggle). The app is used to take the photo, which is sent to the backend. Then the AI (Faster R-CNN with MobileNet Backbone) calculates the value of the coins. Afterwards, the recognized coins are labeled in the app. Using Ngrok, the home computer can be utilized as a server. The app development was not my area of responsibility."
     },
     {
         "title": "PyML - a simple machine learning library",
@@ -158,7 +160,7 @@
         "projectURL": "berle.dev",
         "repoText": "Github",
         "repoURL": "https://github.com/Irish-77/personal-website",
-        "projectUrl": "https://berle.dev",
+        "projectUrl": "https://google.com/",
         "projectText": "Website",
         "description": "This website serves my public appearance and is supposed to bundle all my projects, ideas."        
     }
