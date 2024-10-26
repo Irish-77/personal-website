@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description: "My thoughts on various topics",
 };
 
-const POSTS_PER_PAGE = 3;
+const POSTS_PER_PAGE = 100;
 
 interface BlogPageProps {
   searchParams: {
