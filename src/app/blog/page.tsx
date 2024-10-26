@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import { posts } from "#site/content";
 import { PostItem } from "@/components/post-item";
 import { QueryPagination } from "@/components/query-pagination";
@@ -7,7 +9,7 @@ import { getAllTags, sortPosts, sortTagsByCount, getAllLanguages } from "@/lib/u
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Bastian's Blog",
+  title: "Basti's Blog",
   description: "My thoughts on various topics",
 };
 
