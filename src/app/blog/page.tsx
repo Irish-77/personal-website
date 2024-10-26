@@ -1,4 +1,4 @@
-export const dynamic = 'force-dynamic';
+export const dynamic = 'force-static';
 
 import { posts } from "#site/content";
 import { PostItem } from "@/components/post-item";
