@@ -2,13 +2,16 @@
   {
     "type": "work",
     "title": "Neura Robotics",
-    "date": "2025-today",
+    "date": "2025",
     "subtitle": "Working Student - AI Engineer",
     "location": "Metzingen",
     "institution": "NEURA Robotics",
     "description": [
       "Designed, trained, and deployed AI/vision models to enable advanced perception capabilities, including calibration and integration of industrial camera systems",
-      "Developed and implemented robot-specific use cases for mobile platforms with a focus on perception-side"
+      "Developed and implemented robot-specific use cases for mobile platforms with a focus on perception-side",
+      "Built camera-based perception for autonomous retail robots: fine-tuned and deployed DINOv2, YOLO, and Qwen3.5-VLM based models on Jetson edge hardware for shelf scanning, and prototyped multi camera rigs for the task",
+      "Integrated navigation and perception into an end to end demo, including a dashboard visualizing out of stock and misplaced products as on shelf heatmaps which was showcased at Automatica",
+      "Standardized a grasp data format and built a multimodal grasp data collection tool recording synthetic and real robot data, enabling end to end training of a grasping model"
     ]
   },
   {
@@ -19,8 +22,10 @@
     "location": "Tübingen",
     "institution": "Eberhard Karls Universität Tübingen",
     "description": [
+      "Master's thesis at the [AVG Group](https://uni-tuebingen.de/en/fakultaeten/mathematisch-naturwissenschaftliche-fakultaet/fachbereiche/informatik/lehrstuehle/autonomous-vision/home/) led by [Prof. Andreas Geiger](https://www.cvlibs.net) and supervised by [Daniel Dauner](https://danieldauner.github.io) and [Bernhard Jaeger](https://kait0.github.io) on \"Rig Agnostic 3D Object Detection: A Cross Rig Generalization Benchmark\".",
+      "[123D: Unifying Multi Modal Autonomous Driving Data at Scale](https://arxiv.org/abs/2605.08084) (arXiv:2605.08084): an open source framework that unifies eight real world autonomous driving datasets (~3,300 h / 90,000 km) plus synthetic data behind a single API, demonstrated on cross dataset 3D detection and RL planning.",
       "Computer Science and AI Foundations: Deep Learning, Probabilistic Machine Learning, Statistical Machine Learning, Reinforcement Learning, Recurrent and Generative Artificial Neural Networks, Massively Parallel Computing (CUDA Programming), Mathematics of Machine Learning",
-      "Computer Vision: Computer Vision, Self-Driving Cars, 3D-Vision, Virtual Humans, Video Analytics, Hands-On AI based 3D Vision, Computational Photography"
+      "Computer Vision: Computer Vision, Self Driving Cars, 3D Vision, Virtual Humans, Video Analytics, Hands On AI based 3D Vision, Computational Photography"
     ]
   },
   {
@@ -58,7 +63,9 @@
     "institution": "Accenture Technology Solutions GmbH",
     "description": [
       "Practical phases at various clients in different roles, including, e.g., as a supporter in PMO, analyst role in IT service management, data strategist in strategy consulting, data analyst in the Big Data/AI area",
-      "Collaborating in international and agile (mostly Scrum) teams"
+      "Collaborating in international and agile (mostly Scrum) teams",
+      "Trained and deployed multiple vision models for visual production line inspection in automotive manufacturing",
+      "Extended a product recommender for an automotive configuration platform from product centric to consumer and product centric by incorporating user information into the recommendations"
     ]
   },
   {

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter as FontSans} from "next/font/google";
 import "./globals.css";
-import Providers from "./provider";
+import Providers from "@/components/providers";
 import { cn } from "@/lib/utils"
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
@@ -12,7 +12,7 @@ const fontSans = FontSans({ subsets: ["latin"], variable: "--font-sans" });
 export const metadata: Metadata = {
   title: siteConfig.name,
   description: siteConfig.description,
-  // metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL ?? siteConfig.url),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL ?? siteConfig.url),
 };
 
 

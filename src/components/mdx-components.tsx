@@ -1,20 +1,23 @@
 import Image from "next/image";
 import * as runtime from "react/jsx-runtime";
 import { Callout } from "./callout";
-import { cn } from "@/lib/utils";
 import { Notebook } from "./notebook";
 
-
+/**
+ * Components usable inside MDX blog posts:
+ *   <Image src="..." alt="..." width={...} height={...} />
+ *   <Callout type="info|warning|danger">...</Callout>
+ *   <Notebook src="/assets/notebooks/your.ipynb" />
+ */
+const components = {
+  Image,
+  Callout,
+  Notebook,
+};
 
 const useMDXComponent = (code: string) => {
   const fn = new Function(code);
   return fn({ ...runtime }).default;
-};
-
-const components = {
-  Image,
-  Callout,
-  Notebook
 };
 
 interface MdxProps {

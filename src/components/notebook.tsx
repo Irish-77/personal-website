@@ -1,58 +1,64 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import { IpynbRenderer } from "react-ipynb-renderer-katex";
-import 'katex/dist/katex.min.css';
-
-// import "react-ipynb-renderer/dist/styles/oceans16.css"; // For dark mode
-// import "react-ipynb-renderer/dist/styles/default.css"; // For light mode
-import "../styles/jupyter-light.css";
-import "../styles/jupyter-dark.css";
+import { useEffect, useState } from "react";
+import { IpynbRenderer, type IpynbType } from "react-ipynb-renderer-katex";
+import LatentScatter from "@/components/latent-scatter";
+import "katex/dist/katex.min.css";
+import "@/styles/notebook.css";
 
 interface NotebookProps {
-  filePath: string;
+  src: string;
 }
 
-export const Notebook: React.FC<NotebookProps> = ({ filePath }) => {
-  const [ipynbContent, setIpynbContent] = useState<any>(null);
-  const [theme, setTheme] = useState<string | null>(null);
+export function Notebook({ src }: NotebookProps) {
+  const [ipynb, setIpynb] = useState<IpynbType | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const fetchIpynb = async () => {
-      try {
-        const response = await fetch(filePath);
-        if (!response.ok) {
-          throw new Error(`Failed to fetch notebook: ${response.statusText}`);
-        }
-        const ipynb = await response.json();
-        setIpynbContent(ipynb);
-      } catch (error) {
-        console.error("Error fetching the notebook:", error);
-      }
+    let cancelled = false;
+    fetch(src)
+      .then((res) => {
+        if (!res.ok) throw new Error(`Failed to load notebook (${res.status})`);
+        return res.json();
+      })
+      .then((data) => {
+        if (!cancelled) setIpynb(data);
+      })
+      .catch((err) => {
+        if (!cancelled) setError(err.message ?? "Failed to load notebook");
+      });
+    return () => {
+      cancelled = true;
     };
+  }, [src]);
 
-    if (filePath) {
-      fetchIpynb();
-    }
-  }, [filePath]);
+  if (error) {
+    return (
+      <p className="text-sm text-destructive">Notebook could not be loaded: {error}</p>
+    );
+  }
 
-//   useEffect(() => {
-// 	const loadThemeStyles = async () => {
-// 	  if (theme === "dark") {
-// 		await import("react-ipynb-renderer-katex/dist/styles/oceans16.css");
-// 	  } else {
-// 		await import("react-ipynb-renderer-katex/dist/styles/default.css");
-// 	  }
-// 	};
-  
-// 	loadThemeStyles();
-//   }, [theme]);
+  if (!ipynb) {
+    return (
+      <div className="not-prose my-8 flex flex-col items-center gap-3 py-6">
+        <LatentScatter
+          width={220}
+          height={90}
+          duration={1.6}
+          clusters={3}
+          dotsPerCluster={18}
+          seed={97}
+        />
+        <p className="text-sm text-muted-foreground">Loading notebook…</p>
+      </div>
+    );
+  }
 
   return (
-    <div className="!px-0 !mx-auto" >
-      {ipynbContent ? <IpynbRenderer ipynb={ipynbContent} /> : <p>Loading...</p>}
+    <div className="notebook not-prose my-6">
+      <IpynbRenderer ipynb={ipynb} />
     </div>
   );
-};
+}
 
 export default Notebook;

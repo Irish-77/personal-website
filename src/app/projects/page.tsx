@@ -1,21 +1,23 @@
+import { Metadata } from "next";
+import { projects } from "#site/content";
+import { ProjectList } from "@/components/project-list";
+import { sortProjects } from "@/lib/projects";
 
-import { ExpandableCards } from '@/components/project-parser';
-
-import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: "Projects",
-  description: "Projects that I have developed over the years, ranging from web applications to machine learning systems.",
+  description:
+    "Projects I have developed over the years, ranging from web applications to machine learning systems.",
 };
 
-
-const ProjectPage = () => {
+export default function ProjectsPage() {
+  const visibleProjects = sortProjects(projects.filter((p) => p.published));
 
   return (
     <>
-      <h1 className="text-center font-black text-4xl lg:text-5xl py-10">My Projects</h1>
-      <ExpandableCards />
+      <h1 className="py-10 text-center text-4xl font-black lg:text-5xl">
+        My Projects
+      </h1>
+      <ProjectList projects={visibleProjects} />
     </>
   );
-};
-
-export default ProjectPage;
+}

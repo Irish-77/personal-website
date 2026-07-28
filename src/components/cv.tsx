@@ -1,12 +1,47 @@
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import { IoMdSchool } from "react-icons/io";
 import { MdOutlineWork } from "react-icons/md";
+import type { ReactNode } from 'react';
 
 // Styles
 import '@/styles/cv.css';
 import 'react-vertical-timeline-component/style.min.css';
 
 function CV({ CVList }: { CVList: any[] }) {
+
+  const renderLinkedText = (text: string): ReactNode[] => {
+    const parts: ReactNode[] = [];
+    const linkPattern = /\[([^\]]+)\]\(([^)]+)\)/g;
+    let lastIndex = 0;
+    let match: RegExpExecArray | null;
+
+    while ((match = linkPattern.exec(text)) !== null) {
+      if (match.index > lastIndex) {
+        parts.push(text.slice(lastIndex, match.index));
+      }
+
+      const [, label, href] = match;
+      parts.push(
+        <a
+          key={`${match.index}-${href}`}
+          href={href}
+          target="_blank"
+          rel="noreferrer"
+          className="underline decoration-dotted underline-offset-2 hover:opacity-80"
+        >
+          {label}
+        </a>
+      );
+
+      lastIndex = match.index + match[0].length;
+    }
+
+    if (lastIndex < text.length) {
+      parts.push(text.slice(lastIndex));
+    }
+
+    return parts;
+  };
 
   const vertical_timeline_element_base = 'vertical-timeline-element--';
   var vertical_timeline_element: string;
@@ -22,7 +57,7 @@ function CV({ CVList }: { CVList: any[] }) {
           const color = (cv_item.type === 'work') ? 'var(--work-icon-color)' : 'var(--school-icon-color)'; //'#3e497a' : '#e9d35b';
 
           const descriptionEntries = cv_item.description.map((entry: string, entryIndex:number) =>
-            <li key={entryIndex}> {entry} </li>
+            <li key={entryIndex}> {renderLinkedText(entry)} </li>
           );
 
           return (
